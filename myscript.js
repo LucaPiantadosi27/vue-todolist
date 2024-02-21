@@ -36,11 +36,12 @@ createApp({
                 }
             ]
 
+
+            
         }
   
     },
 
-    
     methods: {
         //cancello le task
         deleteTask(taskIndex) {
@@ -48,7 +49,28 @@ createApp({
             // Il metodo viene chiamato quando un'azione di cancellazione viene attivata
 
             this.tasks.splice(taskIndex, 1);
+        },
 
-        }
+        addTask() {
+        
+            // creo un nuovo oggetto task
+            const newTask = {
+                done: false
+            }
+
+            // inserisco il testo all'interno della sua proprietà "text"
+            newTask.text = this.newTaskText
+
+
+            // lo inserisco nell'array
+            this.tasks.push(newTask)
+
+            console.log(this.tasks)
+
+            // resetto il contenuto del campo di input
+            this.newTaskText = ""
+
+        },
     },
+
 }).mount("#app");
