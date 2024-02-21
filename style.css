@@ -1,0 +1,4 @@
+/* metto il puntatorte con il dito */
+#tasks .fa-square-xmark {
+    cursor: pointer;
+}

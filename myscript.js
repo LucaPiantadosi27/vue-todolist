@@ -12,7 +12,7 @@
 
 
 const {createApp} = Vue;
-
+// Creo un'applicazione Vue e la inserisco nell'elemento HTML.
 createApp({
     data() {
         return {
@@ -37,9 +37,18 @@ createApp({
             ]
 
         }
+  
     },
 
+    
     methods: {
+        //cancello le task
+        deleteTask(taskIndex) {
+            
+            // Il metodo viene chiamato quando un'azione di cancellazione viene attivata
 
+            this.tasks.splice(taskIndex, 1);
+
+        }
     },
 }).mount("#app");
